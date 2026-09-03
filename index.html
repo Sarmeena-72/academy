@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Inspanner Academy - Professional software training in Java, Python, Data Science and Data Analytics.">
+
+    <title>Inspanner Academy | Software Training</title>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #202a3e;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+            width: 100%;
+            background: rgba(32, 42, 62, 0.97);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .navbar {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+
+        .logo span {
+            color: #9a6cff;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            color: #dce1eb;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #9a6cff;
+        }
+
+
+        .nav-btn {
+            background: #7a4ce6;
+            padding: 10px 18px;
+            border-radius: 6px;
+            color: white !important;
+        }
+
+
+        .nav-btn:hover {
+            background: #6339c9;
+        }
+
+
+        .menu-btn {
+            display: none;
+
+            background: transparent;
+            border: none;
+
+            color: white;
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 650px;
+
+            background:
+                radial-gradient(circle at 80% 20%,
+                rgba(122, 76, 230, 0.35),
+                transparent 35%),
+
+                linear-gradient(
+                    135deg,
+                    #141c2e,
+                    #202a3e 55%,
+                    #2b244c
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .hero-content {
+            max-width: 800px;
+            padding: 90px 0;
+        }
+
+
+        .badge {
+            display: inline-block;
+
+            background: rgba(122, 76, 230, 0.18);
+
+            border: 1px solid rgba(154, 108, 255, 0.5);
+
+            color: #cbb8ff;
+
+            padding: 8px 15px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+
+            line-height: 1.08;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 span {
+            color: #9a6cff;
+        }
+
+
+        .hero p {
+            max-width: 680px;
+
+            color: #cbd2df;
+
+            font-size: 18px;
+
+            margin-bottom: 32px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .btn-primary {
+            background: #7a4ce6;
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+            background: #6339c9;
+            transform: translateY(-2px);
+        }
+
+
+        .btn-outline {
+            border: 1px solid #79849a;
+            color: white;
+        }
+
+
+        .btn-outline:hover {
+            border-color: #9a6cff;
+            color: #cbb8ff;
+        }
+
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .stats-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            background: white;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 10px 35px rgba(32, 42, 62, 0.12);
+
+            overflow: hidden;
+        }
+
+
+        .stat {
+            text-align: center;
+            padding: 28px 15px;
+
+            border-right: 1px solid #e8eaf0;
+        }
+
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+
+        .stat h3 {
+            color: #7a4ce6;
+            font-size: 30px;
+        }
+
+
+        .stat p {
+            color: #687185;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+
+        /* =====================================================
+           COMMON SECTION
+        ===================================================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+
+        .section-heading span {
+            color: #7a4ce6;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 38px;
+
+            margin: 10px 0 15px;
+
+            color: #202a3e;
+        }
+
+
+        .section-heading p {
+            color: #687185;
+            font-size: 15px;
+        }
+
+
+
+        /* =====================================================
+           COURSES
+        ===================================================== */
+
+        .courses-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .course-card {
+            background: white;
+
+            padding: 30px 24px;
+
+            border-radius: 12px;
+
+            border: 1px solid #e7e9ef;
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .course-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(32, 42, 62, 0.12);
+        }
+
+
+        .course-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f0ebff;
+
+            border-radius: 12px;
+
+            font-size: 27px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .course-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+
+        .course-card p {
+            color: #687185;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        .course-card ul {
+            list-style: none;
+            margin-bottom: 22px;
+        }
+
+
+        .course-card li {
+            font-size: 13px;
+            color: #4f596b;
+            margin-bottom: 7px;
+        }
+
+
+        .course-card li::before {
+            content: "✓";
+            color: #7a4ce6;
+            font-weight: bold;
+            margin-right: 7px;
+        }
+
+
+        .course-link {
+            color: #7a4ce6;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+
+        /* =====================================================
+           WHY US
+        ===================================================== */
+
+        .why-section {
+            background: #202a3e;
+            color: white;
+        }
+
+
+        .why-section .section-heading h2 {
+            color: white;
+        }
+
+
+        .why-section .section-heading p {
+            color: #bfc7d5;
+        }
+
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .why-card {
+            padding: 28px 22px;
+
+            border-radius: 10px;
+
+            background: #273247;
+
+            border: 1px solid #35405a;
+        }
+
+
+        .why-icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+
+        .why-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+
+        .why-card p {
+            color: #bfc7d5;
+            font-size: 13px;
+        }
+
+
+
+        /* =====================================================
+           LEARNING PROCESS
+        ===================================================== */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            counter-reset: process;
+        }
+
+
+        .process-card {
+            position: relative;
+
+            padding: 30px 22px;
+
+            background: white;
+
+            border-radius: 12px;
+
+            border: 1px solid #e7e9ef;
+
+            text-align: center;
+        }
+
+
+        .process-number {
+            width: 48px;
+            height: 48px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #7a4ce6;
+
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 18px;
+
+            font-weight: 800;
+        }
+
+
+        .process-card h3 {
+            margin-bottom: 8px;
+        }
+
+
+        .process-card p {
+            color: #687185;
+            font-size: 13px;
+        }
+
+
+
+        /* =====================================================
+           CAREER SECTION
+        ===================================================== */
+
+        .career {
+            background:
+                linear-gradient(
+                    135deg,
+                    #2b244c,
+                    #202a3e
+                );
+
+            color: white;
+        }
+
+
+        .career-content {
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .career h2 {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+
+        .career p {
+            color: #cbd2df;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+
+        .career-list {
+            list-style: none;
+        }
+
+
+        .career-list li {
+            margin-bottom: 10px;
+            color: #dce1eb;
+            font-size: 14px;
+        }
+
+
+        .career-list li::before {
+            content: "✓";
+            color: #9a6cff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        .career-box {
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            text-align: center;
+        }
+
+
+        .career-box .big-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+
+        .career-box h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+
+        .career-box p {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =====================================================
+           TESTIMONIALS
+        ===================================================== */
+
+        .testimonial-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .testimonial {
+            background: white;
+
+            padding: 28px;
+
+            border-radius: 12px;
+
+            border: 1px solid #e7e9ef;
+        }
+
+
+        .stars {
+            color: #f5a623;
+            margin-bottom: 15px;
+        }
+
+
+        .testimonial p {
+            color: #555f70;
+
+            font-size: 14px;
+
+            font-style: italic;
+
+            margin-bottom: 20px;
+        }
+
+
+        .student {
+            font-weight: 700;
+            color: #202a3e;
+        }
+
+
+        .student small {
+            display: block;
+
+            color: #7a4ce6;
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+        .faq-item {
+            background: white;
+
+            margin-bottom: 12px;
+
+            border-radius: 8px;
+
+            border: 1px solid #e7e9ef;
+
+            overflow: hidden;
+        }
+
+
+        .faq-question {
+            width: 100%;
+
+            background: white;
+
+            border: none;
+
+            padding: 18px 20px;
+
+            text-align: left;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            color: #202a3e;
+
+            cursor: pointer;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .faq-answer {
+            display: none;
+
+            padding: 0 20px 18px;
+
+            color: #687185;
+
+            font-size: 13px;
+        }
+
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+
+        .faq-item.active .plus {
+            transform: rotate(45deg);
+        }
+
+
+        .plus {
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+
+
+        /* =====================================================
+           CONTACT CTA
+        ===================================================== */
+
+        .contact-section {
+            background: #eef1f5;
+        }
+
+
+        .contact-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7a4ce6,
+                    #4d319e
+                );
+
+            color: white;
+
+            border-radius: 16px;
+
+            padding: 55px 40px;
+
+            text-align: center;
+        }
+
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+
+        .contact-box p {
+            color: #eee9ff;
+            margin-bottom: 25px;
+        }
+
+
+        .contact-details {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-details span {
+            font-size: 14px;
+        }
+
+
+        .contact-white {
+            background: white;
+            color: #6339c9;
+        }
+
+
+        .contact-white:hover {
+            background: #f0ebff;
+        }
+
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #141c2e;
+
+            color: #aeb7c8;
+
+            padding: 45px 0 25px;
+        }
+
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 40px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .footer-logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+
+        .footer-logo span {
+            color: #9a6cff;
+        }
+
+
+        .footer-about {
+            font-size: 13px;
+
+            max-width: 400px;
+        }
+
+
+        footer h3 {
+            color: white;
+
+            font-size: 15px;
+
+            margin-bottom: 14px;
+        }
+
+
+        footer ul {
+            list-style: none;
+        }
+
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+
+        footer a {
+            color: #aeb7c8;
+
+            font-size: 13px;
+        }
+
+
+        footer a:hover {
+            color: #9a6cff;
+        }
+
+
+        .copyright {
+            border-top: 1px solid #29344a;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            font-size: 12px;
+        }
+
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .career-content {
+                grid-template-columns: 1fr;
+            }
+
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE NAVIGATION
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                min-height: 65px;
+            }
+
+
+            .menu-btn {
+                display: block;
+            }
+
+
+            .nav-links {
+                position: absolute;
+
+                top: 65px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #202a3e;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                padding: 10px 20px 20px;
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+
+            .nav-links li {
+                border-bottom: 1px solid #303b51;
+            }
+
+
+            .nav-links a {
+                display: block;
+
+                padding: 13px 5px;
+            }
+
+
+            .nav-btn {
+                text-align: center;
+                margin-top: 8px;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: auto;
+            }
+
+
+            .hero-content {
+                padding: 75px 0 100px;
+            }
+
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+
+            .hero p {
+                font-size: 15px;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+
+
+            /* STATS */
+
+            .stats {
+                margin-top: -40px;
+            }
+
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .stat {
+                border-bottom: 1px solid #e8eaf0;
+            }
+
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+
+            .stat h3 {
+                font-size: 25px;
+            }
+
+
+            /* SECTIONS */
+
+            section {
+                padding: 65px 0;
+            }
+
+
+            .section-heading {
+                margin-bottom: 35px;
+            }
+
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+
+            /* COURSES */
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* WHY */
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* PROCESS */
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* CAREER */
+
+            .career h2 {
+                font-size: 31px;
+            }
+
+
+            /* TESTIMONIAL */
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* CONTACT */
+
+            .contact-box {
+                padding: 40px 20px;
+            }
+
+
+            .contact-box h2 {
+                font-size: 30px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 400px) {
+
+            .container {
+                width: 92%;
+            }
+
+
+            .logo {
+                font-size: 19px;
+            }
+
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .stat {
+                border-right: none;
+            }
+
+
+            .section-heading h2 {
+                font-size: 27px;
+            }
+
+
+            .course-card {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                Inspanner<span>Academy</span>
+            </a>
+
+
+            <button class="menu-btn"
+                    onclick="toggleMenu()"
+                    aria-label="Open Menu">
+                ☰
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+
+                <li>
+                    <a href="#why">Why Us</a>
+                </li>
+
+                <li>
+                    <a href="#process">How It Works</a>
+                </li>
+
+                <li>
+                    <a href="#faq">FAQ</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-btn">
+                        Enroll Now
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    🚀 Build Skills. Build Your Career.
+                </span>
+
+
+                <h1>
+                    Learn Technology.<br>
+                    <span>Build Your Future.</span>
+                </h1>
+
+
+                <p>
+                    Master in-demand software and data skills with
+                    practical training in Java, Python, Data Science
+                    and Data Analytics.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#courses"
+                       class="btn btn-primary">
+                        Explore Courses →
+                    </a>
+
+
+                    <a href="#contact"
+                       class="btn btn-outline">
+                        Talk to Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATS
+    ===================================================== -->
+
+    <div class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat">
+
+                    <h3>4+</h3>
+
+                    <p>Career-Focused Courses</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>100%</h3>
+
+                    <p>Practical Learning</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>Real</h3>
+
+                    <p>Project Experience</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>Career</h3>
+
+                    <p>Focused Training</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COURSES
+    ===================================================== -->
+
+    <section id="courses">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Our Courses</span>
+
+                <h2>
+                    Learn Skills That Matter
+                </h2>
+
+                <p>
+                    Choose a learning path designed to help you
+                    understand technology and build practical skills.
+                </p>
+
+            </div>
+
+
+            <div class="courses-grid">
+
+
+                <!-- JAVA -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ☕
+                    </div>
+
+                    <h3>Java Development</h3>
+
+                    <p>
+                        Learn Java programming from fundamentals
+                        to application development.
+                    </p>
+
+                    <ul>
+
+                        <li>Core Java</li>
+
+                        <li>OOP Concepts</li>
+
+                        <li>Collections</li>
+
+                        <li>Exception Handling</li>
+
+                        <li>Projects</li>
+
+                    </ul>
+
+                    <a href="#contact"
+                       class="course-link">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+
+                <!-- PYTHON -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🐍
+                    </div>
+
+                    <h3>Python Programming</h3>
+
+                    <p>
+                        Build a strong foundation in Python and
+                        develop practical programming skills.
+                    </p>
+
+                    <ul>
+
+                        <li>Python Basics</li>
+
+                        <li>Functions & Loops</li>
+
+                        <li>OOP</li>
+
+                        <li>Libraries</li>
+
+                        <li>Projects</li>
+
+                    </ul>
+
+                    <a href="#contact"
+                       class="course-link">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+
+                <!-- DATA SCIENCE -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🧠
+                    </div>
+
+                    <h3>Data Science</h3>
+
+                    <p>
+                        Learn how to analyze data and discover
+                        meaningful patterns and insights.
+                    </p>
+
+                    <ul>
+
+                        <li>Python for Data Science</li>
+
+                        <li>NumPy & Pandas</li>
+
+                        <li>Data Visualization</li>
+
+                        <li>Machine Learning Basics</li>
+
+                        <li>Projects</li>
+
+                    </ul>
+
+                    <a href="#contact"
+                       class="course-link">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+
+                <!-- DATA ANALYTICS -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        📊
+                    </div>
+
+                    <h3>Data Analytics</h3>
+
+                    <p>
+                        Turn raw data into useful insights using
+                        modern analytics tools.
+                    </p>
+
+                    <ul>
+
+                        <li>Advanced Excel</li>
+
+                        <li>SQL & MySQL</li>
+
+                        <li>Power BI</li>
+
+                        <li>Power Query</li>
+
+                        <li>Dashboard Projects</li>
+
+                    </ul>
+
+                    <a href="#contact"
+                       class="course-link">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY INSPANNER
+    ===================================================== -->
+
+    <section class="why-section" id="why">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Why Inspanner Academy</span>
+
+                <h2>
+                    More Than Just Training
+                </h2>
+
+                <p>
+                    We focus on practical knowledge that helps
+                    learners become confident in their skills.
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        👨‍💻
+                    </div>
+
+                    <h3>Practical Learning</h3>
+
+                    <p>
+                        Learn by writing code, solving problems
+                        and working on practical exercises.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        📁
+                    </div>
+
+                    <h3>Real Projects</h3>
+
+                    <p>
+                        Apply your knowledge through projects
+                        that demonstrate your skills.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        🎯
+                    </div>
+
+                    <h3>Career Focused</h3>
+
+                    <p>
+                        Develop skills aligned with real-world
+                        software and analytics roles.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+                        🤝
+                    </div>
+
+                    <h3>Guidance & Support</h3>
+
+                    <p>
+                        Get guidance while learning and building
+                        your technical confidence.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEARNING PROCESS
+    ===================================================== -->
+
+    <section id="process">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Learning Journey</span>
+
+                <h2>
+                    How You Learn With Us
+                </h2>
+
+                <p>
+                    A simple learning process designed to take
+                    you from fundamentals to practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>Learn</h3>
+
+                    <p>
+                        Understand the concepts and build a
+                        strong technical foundation.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>Practice</h3>
+
+                    <p>
+                        Solve exercises and practice what you
+                        learn through hands-on tasks.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>Build</h3>
+
+                    <p>
+                        Create practical projects that showcase
+                        your knowledge.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>Grow</h3>
+
+                    <p>
+                        Improve your confidence and prepare
+                        for your next career opportunity.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CAREER SECTION
+    ===================================================== -->
+
+    <section class="career">
+
+        <div class="container">
+
+            <div class="career-content">
+
+
+                <div>
+
+                    <h2>
+                        Turn Your Skills Into Career Opportunities
+                    </h2>
+
+
+                    <p>
+                        Technology careers require more than
+                        certificates. Build practical skills,
+                        understand real-world tools and create
+                        projects that demonstrate what you can do.
+                    </p>
+
+
+                    <ul class="career-list">
+
+                        <li>
+                            Practical coding and analytics skills
+                        </li>
+
+                        <li>
+                            Portfolio-ready projects
+                        </li>
+
+                        <li>
+                            Problem-solving approach
+                        </li>
+
+                        <li>
+                            Career-oriented learning
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="career-box">
+
+                    <div class="big-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Start Your Journey
+                    </h3>
+
+                    <p>
+                        Learn today. Build tomorrow.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TESTIMONIALS
+    ===================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Learner Experience</span>
+
+                <h2>
+                    What Our Learners Say
+                </h2>
+
+                <p>
+                    Replace these sample testimonials with
+                    genuine feedback from your academy students.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The practical approach helped me understand
+                        programming concepts much better."
+                    </p>
+
+                    <div class="student">
+                        Student
+                        <small>Python Training</small>
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The project-based learning made it easier
+                        to understand how data analytics works."
+                    </p>
+
+                    <div class="student">
+                        Student
+                        <small>Data Analytics</small>
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "A good learning environment for building
+                        technical skills step by step."
+                    </p>
+
+                    <div class="student">
+                        Student
+                        <small>Java Training</small>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FAQ
+    ===================================================== -->
+
+    <section id="faq">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>FAQ</span>
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+            </div>
+
+
+            <div class="faq">
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Who can join these courses?
+
+                        <span class="plus">
+                            +
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        Our courses can be designed for beginners,
+                        students, graduates and professionals who
+                        want to build or improve their technology skills.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Do I need programming experience?
+
+                        <span class="plus">
+                            +
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        No. Beginner-friendly learning paths can
+                        start from the fundamentals and gradually
+                        move toward practical projects.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Which courses are available?
+
+                        <span class="plus">
+                            +
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        Inspanner Academy focuses on Java,
+                        Python, Data Science and Data Analytics.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        Will I work on projects?
+
+                        <span class="plus">
+                            +
+                        </span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        Practical projects can be included as part
+                        of the learning process so students can
+                        apply concepts in real-world scenarios.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section class="contact-section"
+             id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>
+                    Ready to Start Learning?
+                </h2>
+
+
+                <p>
+                    Take the first step toward building your
+                    technology career with Inspanner Academy.
+                </p>
+
+
+                <div class="contact-details">
+
+                    <span>
+                        📞 +91 7799886500
+                    </span>
+
+                    <span>
+                        📧 info@inspanneracademy.com
+                    </span>
+
+                </div>
+
+
+                <a href="mailto:info@inspanneracademy.com"
+                   class="btn contact-white">
+
+                    Enquire Now →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div>
+
+                    <div class="footer-logo">
+                        Inspanner<span>Academy</span>
+                    </div>
+
+
+                    <p class="footer-about">
+
+                        Building practical technology skills
+                        through focused training in Java,
+                        Python, Data Science and Data Analytics.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Courses</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#courses">
+                                Java Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#courses">
+                                Python Programming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#courses">
+                                Data Science
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#courses">
+                                Data Analytics
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#why">
+                                Why Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#process">
+                                Learning Journey
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 Inspanner Academy.
+                All Rights Reserved.
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* ==============================
+           MOBILE MENU
+        ============================== */
+
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        /* Close menu after clicking a link */
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    document
+                        .getElementById("navLinks")
+                        .classList.remove("active");
+
+                });
+
+            });
+
+
+
+        /* ==============================
+           FAQ
+        ============================== */
+
+        document
+            .querySelectorAll(".faq-question")
+            .forEach(function(button) {
+
+                button.addEventListener("click", function() {
+
+                    const item =
+                        this.parentElement;
+
+                    item.classList.toggle("active");
+
+                });
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
