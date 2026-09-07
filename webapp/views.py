@@ -5,7 +5,7 @@ from .models import Enrollment
 
 
 def home(request):
-    return render(request, 'webapp/index.html')
+    return render(request, 'index.html')
 
 
 def enroll(request):
