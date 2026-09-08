@@ -1,7 +1,5 @@
-from django.shortcuts import render ,redirect
+from django.shortcuts import render, redirect
 from .models import Enrollment
-
-# Create your views here.
 
 
 def home(request):
@@ -9,7 +7,6 @@ def home(request):
 
 
 def enroll(request):
-
     if request.method == 'POST':
 
         Enrollment.objects.create(
@@ -28,5 +25,5 @@ def enroll(request):
                 'success': 'Enrollment submitted successfully! Our team will contact you soon.'
             }
         )
-    return redirect('/')
+
     return redirect('/')
