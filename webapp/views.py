@@ -23,7 +23,7 @@ def enroll(request):
 
         return render(
             request,
-            'webapp/index.html',
+            'index.html',
             {
                 'success': 'Enrollment submitted successfully! Our team will contact you soon.'
             }
